@@ -6,7 +6,10 @@
 */
 (function() {
   "use strict";
-
+  /**
+   * Email Init
+   */
+  emailjs.init("bknIUjtf-oPl_YDJo")
   /**
    * Easy selector helper function
    */
@@ -260,7 +263,5 @@
       mirror: false
     })
   });
-  /**
-   * Email Sender
-   */
+
 })()
