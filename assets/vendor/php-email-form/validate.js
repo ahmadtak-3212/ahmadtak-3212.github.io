@@ -44,12 +44,12 @@
           displayError(thisForm, 'The reCaptcha javascript API url is not loaded!')
         }
       } else {
-        php_email_form_submit(thisForm, action, formData);
+        email_form_submit(thisForm, action, formData);
       }
     });
   });
 
-  function php_email_form_submit(thisForm, action, formData) {
+  function email_form_submit(thisForm, action, formData) {
     var templateParams = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
