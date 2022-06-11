@@ -717,6 +717,7 @@ section {
   justify-content: center;
   transition: ease-in-out 0.3s;
   position: relative;
+
 }
 .services .icon-box .icon i {
   font-size: 36px;
@@ -749,6 +750,39 @@ section {
 .services .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+.services .card{
+  border-color: #0563bb !important;
+}
+.services .card-body{
+  height: 300px;
+}
+.services .card-header {
+  border-color: #0563bb !important;
+  background-color: white;
+}
+.services .card-footer {
+  background-color: white !important;
+  border-color: #0563bb !important;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.services .infraredtags:hover {
+  background: url(../img/publications/infraredtags/infraredtags.gif) center no-repeat;
+  background-size: cover;
+}
+.services .infraredtags {
+  background: url(../img/publications/infraredtags/infraredtags.png) center no-repeat;
+  background-size: cover;
+}
+.services .structcodes:hover {
+  background: url(../img/publications/structcodes/structcodes.gif) center no-repeat;
+  background-size: cover;
+}
+.services .structcodes {
+  background: url(../img/publications/structcodes/structcodes.png) center no-repeat;
+  background-size: contain;
 }
 .services .iconbox-blue i {
   color: #47aeff;
@@ -804,7 +838,9 @@ section {
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
 }
-
+.services .row {
+  justify-content: center;
+}
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
