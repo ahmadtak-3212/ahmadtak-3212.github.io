@@ -751,7 +751,7 @@ section {
   border-color: #fff;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
-.services .card{
+.services .card
   border-color: #0563bb !important;
 }
 .services .card-body{
@@ -766,7 +766,7 @@ section {
   border-color: #0563bb !important;
   line-height: 24px;
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .services .infraredtags:hover {
   background: url(../img/publications/infraredtags/infraredtags.gif) center no-repeat;
