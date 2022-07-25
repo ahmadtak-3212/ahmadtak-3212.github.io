@@ -454,6 +454,7 @@ section {
 
 .skills table{
   text-align: center;
+  width: fit-content;
 }
 .skills table thead{
   color: #272829;
@@ -783,6 +784,12 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 10px;
+}
+.services #infraredtags {
+  margin: 10px;
+}
+.services #structcodes {
+  margin: 10px;
 }
 .services .infraredtags:hover {
   background: url(../img/publications/infraredtags/infraredtags.gif) center no-repeat;
