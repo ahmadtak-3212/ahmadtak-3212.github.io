@@ -262,4 +262,100 @@
     })
   });
 
+  /*** Slides ***/
+var currentSlide = 0,
+totalSlides  = jQuery(".tl-item").length - 1;
+
+// Creates the navigation
+jQuery(".timeline").after("<div class='tl-nav-wrapper'><ul class='tl-nav'></ul></div><label class='tl-items-arrow-left'></label><label class='tl-items-arrow-right'></label>");
+jQuery( ".tl-copy" ).wrapInner( "<div class='tl-copy-inner'></div>");
+
+// Cicle through items and creates the nav
+jQuery(".tl-item").each(function(i) {
+var year = jQuery(".tl-item:eq(" + i + ")" ).data("year");
+jQuery(".tl-nav").append("<li><div>" + year + "</div></li>");
+
+// Click handlers
+jQuery(".tl-nav li:eq(" + i + ")").click(function() {
+if(!jQuery(".tl-item:eq(" + i + ")" ).hasClass("tl-active")) {
+  // Activates the item
+  jQuery(".tl-item").removeClass("tl-active");
+  jQuery(".tl-item:eq(" + i + ")" ).addClass("tl-active");
+  currentSlide = i;
+
+  // Activates the item nav
+  jQuery(".tl-nav li").removeClass("tl-active");
+  jQuery(".tl-nav li:eq(" + i + ")" ).addClass("tl-active");
+}
+});
+});
+
+// Activates the first slide
+jQuery(".tl-item:first, .tl-nav li:first").addClass("tl-active");
+
+// Slide's arrows click handlers
+jQuery(".tl-items-arrow-left").on("click", function(){
+if(currentSlide > 0) {
+currentSlide--;
+
+// Activates the previous item
+jQuery(".tl-item").removeClass("tl-active");
+jQuery(".tl-item:eq(" + currentSlide +")").addClass("tl-active");
+
+// Activates the previous item nav
+jQuery(".tl-nav li").removeClass("tl-active");
+jQuery(".tl-nav li:eq(" + currentSlide + ")" ).addClass("tl-active");
+}
+});
+
+jQuery(".tl-items-arrow-right").on("click", function(){
+if(currentSlide < totalSlides) {
+currentSlide++;
+
+// Activates the next item
+jQuery(".tl-item").removeClass("tl-active");
+jQuery(".tl-item:eq(" + currentSlide +")").addClass("tl-active");
+
+// Activates the next item nav
+jQuery(".tl-nav li").removeClass("tl-active");
+jQuery(".tl-nav li:eq(" + currentSlide + ")" ).addClass("tl-active");
+}
+});
+
+/*** Nav ***/
+// The nav's width
+var navWidth = (jQuery(".tl-nav li").outerWidth(true) * jQuery(".tl-nav li").length) + 36;
+jQuery(".tl-nav").width(navWidth);
+
+// The nav's arrows
+jQuery(".tl-nav-wrapper").append("<label class='tl-nav-arrow-left'></label><label class='tl-nav-arrow-right'></label>");
+
+/*** The timeline's height ***/
+var vpHeight  = jQuery(window).height();
+var tlHeight = vpHeight - jQuery(".tl-nav-wrapper").outerHeight(true) - 26;
+jQuery(".tl-wrapper").height(vpHeight);
+jQuery(".tl-item").css("max-height", tlHeight);
+jQuery(".tl-item").height(tlHeight);
+
+/*** Nav's navigation... ***/
+var navTranslation = 0;
+var navLimit = (navWidth - jQuery(".tl-nav-wrapper").outerWidth(true) + 20) * -1;
+
+// To the left
+jQuery(".tl-nav-arrow-left").on("click", function() {
+if(navTranslation < 0) {
+navTranslation = navTranslation + 86;
+jQuery(".tl-nav").css(prefix + "transform", "translateX(" + navTranslation + "px)");
+}
+});
+
+// To the right
+jQuery(".tl-nav-arrow-right").on("click", function() {
+if(navTranslation >= navLimit) {
+navTranslation = navTranslation - 86;
+jQuery(".tl-nav").css(prefix + "transform", "translateX(" + navTranslation + "px)");
+}
+});
+
 })()
+
