@@ -797,6 +797,16 @@ section {
 .services #structcodes {
   margin: 10px;
 }
+.services #brightmarker {
+  margin: 10px;
+}
+.services #fabrobitcs {
+  margin: 10px;
+}
+.services #infraredtags_cnn {
+  margin: 10px;
+}
+
 .services .infraredtags:hover {
   background: url(../img/publications/infraredtags/infraredtags.gif) center no-repeat;
   background-size: cover;
@@ -813,6 +823,34 @@ section {
   background: url(../img/publications/structcodes/structcodes.png) center no-repeat;
   background-size: contain;
 }
+
+.services .brightmarker:hover {
+  background: url(../img/publications/brightmarker/brightmarker.gif) center no-repeat;
+  background-size: cover;
+}
+.services .brightmarker {
+  background: url(../img/publications/brightmarker/brightmarker.png) center no-repeat;
+  background-size: contain;
+}
+
+.services .fabrobotics:hover {
+  background: url(../img/publications/fabrobotics/fabrobotics.gif) center no-repeat;
+  background-size: cover;
+}
+.services .fabrobotics {
+  background: url(../img/publications/fabrobotics/fabrobotics.jpg) center no-repeat;
+  background-size: contain;
+}
+
+.services .infraredtags_cnn:hover {
+  background: url(../img/publications/infraredtags/infraredtags.gif) center no-repeat;
+  background-size: cover;
+}
+.services .infraredtags_cnn {
+  background: url(../img/publications/infraredtags_cnn/infraredtags_cnn.PNG) center no-repeat;
+  background-size: contain;
+}
+
 .services .iconbox-blue i {
   color: #47aeff;
 }
